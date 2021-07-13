@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    <style>
+        .container{
+            width: 700px;
+            min-height: 500px;
+            margin:0px auto;
+            border: 1px solid black;
+            font-size: 20px;
+        }
+        .your_name, .location, .language {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 30px 0;
+        }
+        .comment {
+            margin-left: 100px;
+        }
+        #comment_box {
+            width: 500px;
+            height:150px;
+        }
+        .button {
+            margin-left: 550px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/process_survey" method="post">
+            <div class="your_name">
+                <label>Your Name: </label>
+                <input type="text" name="first_name">
+            </div>
+            <div class="location">
+                <label>Dojo Location: </label>
+                <select type="submit" name="dojo_location">
+                    <option>San Jose</option>
+                    <option>Irvine</option>
+                    <option>Chicago</option>
+                </select>
+            </div>
+            <div class="language">
+                <label>Favorite Language: </label>
+                <select type="submit" name="fav_language">
+                    <option>Python</option>
+                    <option>Javascript</option>
+                    <option>C++</option>
+                </select>
+            </div>
+            <div class="comment">
+                <label>Comment (optional): </label>
+                <input type="text" id="comment_box" name="comment">
+            </div>
+            <div class="button">
+                <input type="submit" value="Button">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
