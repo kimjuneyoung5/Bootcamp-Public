@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+        form {
+            margin: 20px 0;
+        }
+        input[type="tel"]{
+            width:500px;
+            font-size:20px;
+        }
+        button{
+            width:100px;
+            height:30px;
+            box-shadow: 1px 1px 1px black;
+        }
+        #num {
+            margin-top:30px;
+        }
+        #num > a {
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a New User</h1>
+    <form action="/users/create" method="post">
+        <p>First name: </p>
+        <input type="tel" name="first_name" id="">
+        <p>Last name: </p>
+        <input type="tel" name="last_name" id="">
+        <p>Email: </p>
+        <input type="tel" name="email" id="">
+        <p id = num><button>Create</button> <a href="/users">Go Back</a></p>
+    </form>
+</body>
+</html>

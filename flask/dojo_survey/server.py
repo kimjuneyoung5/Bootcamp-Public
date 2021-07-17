@@ -8,6 +8,7 @@ app.secret_key = "Keep it secret, keep it safe"
 def index():
     return render_template("index.html")
 
+
 @app.route("/process_survey", methods=['POST'])
 def process():
     session['first_name'] = request.form['first_name']
@@ -15,6 +16,7 @@ def process():
     session['fav_language'] = request.form['fav_language']
     session['comment'] = request.form['comment']
     return redirect("/result")
+
 
 @app.route("/result")
 def display():
@@ -25,6 +27,7 @@ def display():
         fav_language = session['fav_language'],
         comment = session['comment']
     )
+
 
 if __name__=="__main__":
     app.run(debug=True)
